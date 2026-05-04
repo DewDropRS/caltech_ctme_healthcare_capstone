@@ -98,10 +98,10 @@ datasets. The following columns were treated this way:
 
 **Missing value treatment — median by Outcome group:**
 
-Rather than using a single global median to impute missing values, we calculated 
-the median separately for diabetic patients (Outcome=1) and non-diabetic patients 
-(Outcome=0). This preserves the natural difference in clinical measurements 
-between the two groups.
+Rather than using a single global median, missing values were imputed using the 
+median calculated separately for diabetic patients (Outcome=1) and non-diabetic 
+patients (Outcome=0). This preserves the natural difference in clinical 
+measurements between the two groups.
 
 ```python
 # Replace impossible zeros with NaN
@@ -150,9 +150,9 @@ and justify the cleaning decisions made in `data_loader.py`.
 When a dataset is imbalanced, a naive model could achieve 65% accuracy by 
 simply predicting every patient as non-diabetic — without learning anything 
 meaningful. This is why accuracy alone is not a sufficient metric for this 
-problem. We use sensitivity, specificity, and AUC-ROC instead, and apply 
-stratified sampling to ensure every train/test split maintains the same 
-65/35 class ratio as the full dataset.
+problem. Sensitivity, specificity, and AUC-ROC are used instead, with stratified sampling 
+applied to ensure every train/test split maintains the same 65/35 class ratio 
+as the full dataset.
 
 **New Python patterns used:**
 
