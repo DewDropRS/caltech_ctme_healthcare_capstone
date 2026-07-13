@@ -1,5 +1,6 @@
-# Caltech CTME Data Science Capstone — Healthcare Industry
-## Diabetes Prediction Using Classification Models
+# Healthcare Capstone: Diabetes Prediction Using Classification Models
+
+*Caltech Center for Technology & Management Education (CTME) — Data Science Bootcamp*
 
 ---
 
