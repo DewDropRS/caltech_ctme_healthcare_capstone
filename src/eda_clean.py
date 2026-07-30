@@ -86,9 +86,8 @@ def run_eda_clean(filepath, findings):
     df_plot['Outcome_Label'] = df_plot['Outcome'].map(OUTCOME_LABELS)
     feature_cols = [col for col in df_plot.columns if col not in ['Outcome', 'Outcome_Label']]
     g = sns.pairplot(df_plot, vars=feature_cols, hue='Outcome_Label', diag_kind='kde', kind='reg')
-    plt.suptitle('Feature Pairplots by Diabetes Outcome (KDE Diagonal)', fontsize=16)
     # Set the title on the pairplot's figure directly
-    g.fig.suptitle('Feature Pairplots by Diabetes Outcome (KDE Diagonal)', fontsize=16)
+    g.figure.suptitle('Feature Pairplots by Diabetes Outcome (KDE Diagonal)', fontsize=16)
     # subplots_adjust reserves top margin for the title without recalculating
     # the whole layout, so it won't clip or drop the pairplot's external legend
     # the way tight_layout can
