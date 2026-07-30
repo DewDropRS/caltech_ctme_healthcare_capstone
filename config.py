@@ -28,6 +28,10 @@ EDA_CLEAN_PAIRPLOT      = OUTPUTS_FIGURES_DIR / 'eda_clean_pairplot.png'
 EDA_CLEAN_HEATMAP       = OUTPUTS_FIGURES_DIR / 'eda_clean_heatmap.png'
 EDA_CLEAN_AGE_BINS      = OUTPUTS_FIGURES_DIR / 'eda_clean_age_bins.png'
 
+# --- EDA Pairplot ---
+# Maps numeric Outcome to descriptive labels
+OUTCOME_LABELS = {0: 'Non-Diabetic', 1: 'Diabetic'}
+
 # --- Consolidated Findings Report ---
 FINDINGS_REPORT     = OUTPUTS_REPORTS_DIR / 'project_findings.csv'
 CORRELATION_MATRIX  = OUTPUTS_REPORTS_DIR / 'eda_clean_correlation_matrix.csv'
